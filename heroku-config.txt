@@ -1,0 +1,5 @@
+#Copy Up
+#heroku config:set $(cat .env | sed '/^$/d; /#[[:print:]]*$/d')
+
+#Copy Down
+#heroku config | sed 's/:  */=/g; /^=/d' >> .env
